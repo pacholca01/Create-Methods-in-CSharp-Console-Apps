@@ -1,0 +1,9 @@
+*.cache
+*.json
+*.sln
+*.props
+*.targets
+*.g.cs
+*.editorconfig
+*info.cs
+*Attributes.cs
