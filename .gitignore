@@ -7,3 +7,7 @@
 *.editorconfig
 *info.cs
 *Attributes.cs
+*.dll
+*.exe
+*.pdb
+*.txt
