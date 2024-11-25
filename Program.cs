@@ -6,6 +6,18 @@ SayHello();
 Console.WriteLine("\nContents of array 'int':");
 PrintArray();
 Console.WriteLine("\nAfter calling methods.");
+Console.WriteLine("\nWriting new random numbers:");
+DisplayRandomNumbers();
+
+void DisplayRandomNumbers()
+{
+    Random random = new Random();
+    for (int i = 0; i < 5; i++)
+    {
+        Console.Write($"{random.Next(1, 100)} ");
+    }
+    Console.WriteLine();
+}
 
 // Method names should be Pascal case
 void PrintArray()
