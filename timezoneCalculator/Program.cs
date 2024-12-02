@@ -3,7 +3,7 @@ using System.Globalization;
 using System.IO.Compression;
 
 
-// Timezone caculator
+// Timezone cac
 // https://learn.microsoft.com/en-us/training/modules/write-first-c-sharp-method/4-exercise-create-reusable-methods
 
 int[] times = {800, 1200, 1600, 2000};
