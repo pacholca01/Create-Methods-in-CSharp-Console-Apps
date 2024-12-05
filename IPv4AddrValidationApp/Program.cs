@@ -17,9 +17,65 @@ and if each ipAddress number is in range 0 - 255
 */
 using System;
 
-string phrase = "255.255.255.255";
-string[] bytes = phrase.Split('.');
-int i = 0;
+string[] ipv4inputs = {"255..0.0"};
+//string[] bytes = ipv4input.Split('.');
+// int i = 0;
+string[] address;
+bool validLen = false;
+bool validZeroes = false;
+bool validRange = false;
+
+
+foreach( string input in ipv4inputs) {
+
+    address = input.Split(".",StringSplitOptions.RemoveEmptyEntries);
+    // Method Calls
+    LengthValidation();
+    Console.WriteLine(validLen);
+    RangeValidation();
+    Console.WriteLine(validRange);
+    ZeroesValidation();
+    Console.WriteLine(validZeroes);
+
+    if (validLen && validRange && validZeroes) {
+        Console.WriteLine($"{input} is a valid IPv4 address.");
+    } else {
+        Console.WriteLine($"{input} is NOT a valid IPv4 address.");
+
+    }
+}
+
+
+// Method signatures
+//
+void LengthValidation() {
+    validLen = address.Length == 4;
+};
+
+//
+void RangeValidation() {
+    foreach (string number in address)
+    {
+        int i = Convert.ToInt32(number);
+        if (i < 0 || i > 255) {
+            validRange = false;
+            return; 
+        }
+    }
+    validRange = true;
+};
+
+//
+void ZeroesValidation() {
+    foreach (string number in address) {
+        if (number.Length > 1 && number.StartsWith("0")){
+            validZeroes = false;
+            return; 
+        }
+    }
+    validZeroes = true;
+};
+/*
 bool isByte1Valid = false;
 bool isByte2Valid = false;
 bool isByte3Valid = false;
@@ -59,9 +115,7 @@ Console.WriteLine( $"Byte 1 is valid: {isByte1Valid}" );
 Console.WriteLine( $"Byte 2 is valid: {isByte2Valid}" );
 Console.WriteLine( $"Byte 3 is valid: {isByte3Valid}" );
 Console.WriteLine( $"Byte 4 is valid: {isByte4Valid}" );
-
-
-
+*/
 
 
 
