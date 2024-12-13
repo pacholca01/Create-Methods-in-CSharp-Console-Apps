@@ -5,40 +5,41 @@ using System.IO.Compression;
 
 // Timezone cac
 // https://learn.microsoft.com/en-us/training/modules/write-first-c-sharp-method/4-exercise-create-reusable-methods
+// https://learn.microsoft.com/en-us/training/modules/create-c-sharp-methods-parameters/2-exercise-add-parameters-to-methods
 
 int[] times = {800, 1200, 1600, 2000};
 int diff = 0;
 
 Console.WriteLine("Enter Current GMT");
 int currentGMT = Convert.ToInt32(Console.ReadLine());
-if (Math.Abs(currentGMT) > 12) { // https://learn.microsoft.com/en-us/dotnet/api/system.math.abs?view=net-9.0
-    Console.WriteLine("Invalid GMT");
-} 
+ValidateGMT(currentGMT);
 
 Console.WriteLine("Current Medicine Schedule:");
 DisplayTimes();
 
 Console.WriteLine("\nEnter new GMT:");
 int newGMT = Convert.ToInt32(Console.ReadLine());
-if (Math.Abs(newGMT) > 12 || Math.Abs(currentGMT) > 12) // https://learn.microsoft.com/en-us/dotnet/api/system.math.abs?view=net-9.0
-{ 
-    Console.WriteLine("Invalid GMT");
-} 
-// Do both GMTs hav ethe same positive/negative sign? 
-else if (newGMT <= 0 && currentGMT <=0 || newGMT >= 0 && currentGMT >= 0) 
-{
-    diff = 100 * (Math.Abs(newGMT) - Math.Abs(currentGMT));
-    AdjustTimes();
-}
-// Are both GMTs having opposite positive/negative signs? 
-else 
-{
-    diff = 100 * (Math.Abs(newGMT) + Math.Abs(currentGMT));
-    AdjustTimes();
-}
+ValidateGMT(newGMT);
 
-Console.WriteLine("New Medicine Schedule:");
-DisplayTimes();
+DisplayAdjustTimes(times, currentGMT, newGMT);
+
+
+void DisplayAdjustTimes (int[] times, int currentGMT, int newGMT) {
+
+    // Do both GMTs hav ethe same positive/negative sign? 
+    if (newGMT <= 0 && currentGMT <=0 || newGMT >= 0 && currentGMT >= 0) {
+        diff = 100 * (Math.Abs(newGMT) - Math.Abs(currentGMT));
+        AdjustTimes();
+    }
+
+    else { // Are both GMTs having opposite positive/negative signs? 
+        diff = 100 * (Math.Abs(newGMT) + Math.Abs(currentGMT));
+        AdjustTimes();
+    }
+
+    Console.WriteLine("New Medicine Schedule:");
+    DisplayTimes();
+}
 
 
 void DisplayTimes() {
@@ -58,14 +59,21 @@ void DisplayTimes() {
     }
 }
 
+
 void AdjustTimes() {
     // Adjust the time by adding the difference, keeping the value within 24 hours. 
     for (int i = 0; i < times.Length; i++) {
         times[i] = ((times[i] + diff)) % 2400;
+        //int newTime = ((times[i] + diff)) % 2400;
+        //Console.WriteLine($"{times[i]} -> {newTime}");
     }
 }
-// Format and display medicine times
 
+void ValidateGMT(int valueGMT) {
+    if (Math.Abs(valueGMT) > 12) { // https://learn.microsoft.com/en-us/dotnet/api/system.math.abs?view=net-9.0
+        Console.WriteLine("Invalid GMT");
+    } 
+}
 
 
 /*
