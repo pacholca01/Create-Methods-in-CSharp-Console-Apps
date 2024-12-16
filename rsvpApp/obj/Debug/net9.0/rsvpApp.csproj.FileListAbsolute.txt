@@ -1,0 +1,15 @@
+V:\Department\TSU\Microsoft\CSharp_Dev\Create-Methods-in-CSharp-Console-Apps\rsvpApp\obj\Debug\net9.0\rsvpApp.GeneratedMSBuildEditorConfig.editorconfig
+V:\Department\TSU\Microsoft\CSharp_Dev\Create-Methods-in-CSharp-Console-Apps\rsvpApp\obj\Debug\net9.0\rsvpApp.AssemblyInfoInputs.cache
+V:\Department\TSU\Microsoft\CSharp_Dev\Create-Methods-in-CSharp-Console-Apps\rsvpApp\obj\Debug\net9.0\rsvpApp.AssemblyInfo.cs
+V:\Department\TSU\Microsoft\CSharp_Dev\Create-Methods-in-CSharp-Console-Apps\rsvpApp\obj\Debug\net9.0\rsvpApp.csproj.CoreCompileInputs.cache
+V:\Department\TSU\Microsoft\CSharp_Dev\Create-Methods-in-CSharp-Console-Apps\rsvpApp\obj\Debug\net9.0\rsvpApp.sourcelink.json
+V:\Department\TSU\Microsoft\CSharp_Dev\Create-Methods-in-CSharp-Console-Apps\rsvpApp\bin\Debug\net9.0\rsvpApp.exe
+V:\Department\TSU\Microsoft\CSharp_Dev\Create-Methods-in-CSharp-Console-Apps\rsvpApp\bin\Debug\net9.0\rsvpApp.deps.json
+V:\Department\TSU\Microsoft\CSharp_Dev\Create-Methods-in-CSharp-Console-Apps\rsvpApp\bin\Debug\net9.0\rsvpApp.runtimeconfig.json
+V:\Department\TSU\Microsoft\CSharp_Dev\Create-Methods-in-CSharp-Console-Apps\rsvpApp\bin\Debug\net9.0\rsvpApp.dll
+V:\Department\TSU\Microsoft\CSharp_Dev\Create-Methods-in-CSharp-Console-Apps\rsvpApp\bin\Debug\net9.0\rsvpApp.pdb
+V:\Department\TSU\Microsoft\CSharp_Dev\Create-Methods-in-CSharp-Console-Apps\rsvpApp\obj\Debug\net9.0\rsvpApp.dll
+V:\Department\TSU\Microsoft\CSharp_Dev\Create-Methods-in-CSharp-Console-Apps\rsvpApp\obj\Debug\net9.0\refint\rsvpApp.dll
+V:\Department\TSU\Microsoft\CSharp_Dev\Create-Methods-in-CSharp-Console-Apps\rsvpApp\obj\Debug\net9.0\rsvpApp.pdb
+V:\Department\TSU\Microsoft\CSharp_Dev\Create-Methods-in-CSharp-Console-Apps\rsvpApp\obj\Debug\net9.0\rsvpApp.genruntimeconfig.cache
+V:\Department\TSU\Microsoft\CSharp_Dev\Create-Methods-in-CSharp-Console-Apps\rsvpApp\obj\Debug\net9.0\ref\rsvpApp.dll
