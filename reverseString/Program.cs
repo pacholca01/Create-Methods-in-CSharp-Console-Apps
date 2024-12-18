@@ -8,16 +8,36 @@ string palindrome = "racecar";
 string emordnilap = "desserts";
 
 Console.WriteLine(ReverseWord(pangram));
+Console.WriteLine(ReverseWordMethod2(pangram));
 Console.WriteLine(ReverseWord(palindrome));
 Console.WriteLine(ReverseWord(emordnilap));
+
+Console.WriteLine(ReverseEachWordInSentence(pangram));
+
+string ReverseEachWordInSentence(string intput) {
+    string result = "";
+    string[] words = intput.Split(" ");
+    
+    foreach (string word in words){
+        result += ReverseWord(word)+ " ";
+    }
+    return result;
+}
 
 string ReverseWord(string word) 
 {
     char[] charArray = new char[word.Length];
-    for (int i = 0; i < word.Length; i++) 
-    {
+    for (int i = 0; i < word.Length; i++) {
         charArray[i] = word[word.Length-i-1];
     }
     string result = new string (charArray);
+    return result;
+}
+
+string ReverseWordMethod2(string word) {
+    string result = "";
+    for (int i = word.Length - 1; i >= 0; i--) {
+        result += word[i]; 
+    }
     return result;
 }
